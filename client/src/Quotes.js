@@ -39,7 +39,7 @@ const Quotes = () => {
     <div className="App">
       <header className="App-header">
         <h1>Inspirational and Motivational Quotes</h1>
-        <h3 className="api">Interested in JSON files? Checkout the backend server by simply adding /quotes,  quotes/random or /quotes/search?term=[your-search-term] to the URL</h3>
+        <h3 className="api">Interested in JSON files? Checkout the backend server by simply adding /quotes,  quotes/random or /quotes/search?term=[your search term] to the URL</h3>
         {randomQuote.map(random => {
           return (
             <div className="random-quote-wrapper">
