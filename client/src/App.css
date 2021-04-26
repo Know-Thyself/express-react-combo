@@ -76,7 +76,7 @@
 
 .quotes-wrapper {
   background-color: #282646;
-  border-style: dashed;
+  /* border-style: dashed; */
   margin-bottom: 0.5em;
   padding: 0 0.5em;
   width: 90%;
