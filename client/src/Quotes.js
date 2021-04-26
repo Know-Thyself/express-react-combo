@@ -9,10 +9,9 @@ const Quotes = () => {
   useEffect(() => {
     if (!controller) {
       fetch("/quotes")
-        .then((res) => res.json())
-        .then((data) => {
-          setQuotes(data);
-        }).catch(err =>console.error(err));
+      .then((res) => res.json())
+      .then((data) => setQuotes(data))
+      .catch(err =>console.error(err));
       setController(true);
     }
   }, [controller, quotes]);
@@ -38,18 +37,18 @@ const Quotes = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Inspirational and Motivational Quotes</h1>
-        <h3 className="api">Interested in JSON files? Checkout the backend server by simply adding /quotes,  quotes/random or /quotes/search?term=[your search term] to the URL</h3>
-        {randomQuote.map(random => {
+        <h1 key="header">Inspirational and Motivational Quotes</h1>
+        <h3 key="api-info" className="api">Interested in JSON files? Checkout the backend server by simply adding /quotes,  quotes/random or /quotes/search?term=[your search term] to the URL</h3>
+        {randomQuote.map((random, index) => {
           return (
-            <div className="random-quote-wrapper">
-              <h3>" {random.quote} "</h3>
-              <h4>{random.author}</h4>
+            <div key="random-quote" className="random-quote-wrapper">
+              <h3 key={index}>" {random.quote} "</h3>
+              <h4 key={random.author}>{random.author}</h4>
             </div>
           )
         })}
         <div key="input-form" className="search-input-wrapper">
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
           <input 
             key="search-input "
             type="text"
@@ -59,20 +58,16 @@ const Quotes = () => {
             onChange={handleSearchInput}
           />
         </div>
-        <div className="button-container">
-          <div id="awesome-button">
-            <button onClick={randomQuoteGenerator} className="random-button">Random Quote</button>
+        <div key="button-wrapper" className="button-container">
+          <div className="awesome-button">
+            <button key="random-button" onClick={randomQuoteGenerator} className="random-button">Random Quote</button>
           </div>
         </div>
         {quotes.map((quote, index) => {
           return (
-            <div className="quotes-wrapper">
-              <h3 key={index} className="quote">
-                <span>" {quote.quote} "</span>
-              </h3>
-              <h4 className="author">
-                <span>{quote.author}</span>
-              </h4>
+            <div key={index} className="quotes-wrapper">
+              <h3 key={index} className="quote">" {quote.quote} "</h3>
+              <h4 key={quote.author} className="author">{quote.author}</h4>
             </div>
           );
         })}

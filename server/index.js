@@ -6,18 +6,8 @@ const quotes = require("./quotes.json");
 
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-app.get("/", (req, res) => {
-  res.send(
-	  "Biruk's Quote Server!  Ask me for /quotes,  quotes/random or /quotes/search?term=[your-search-term]"
-  );
-});
-
-app.get('/api', (req, res) => {
-  res.json({message: "Server connected"})
-});
-
 app.get("/quotes", (req, res) => {
-	res.send(quotes);
+	res.json(quotes);
 });
 
 app.get("/quotes/random", (req, res) => {
