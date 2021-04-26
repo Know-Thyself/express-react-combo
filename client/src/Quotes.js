@@ -11,9 +11,8 @@ const Quotes = () => {
       fetch("/quotes")
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           setQuotes(data);
-        });
+        }).catch(err =>console.error(err));
       setController(true);
     }
   }, [controller, quotes]);
