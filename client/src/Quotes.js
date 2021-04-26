@@ -55,7 +55,7 @@ const Quotes = () => {
             key="search-input "
             type="text"
             className="search-bar"
-            placeholder="Search for a quote by key word or author name"
+            placeholder="Search for quotes by keywords or author names"
             value={searchInput}
             onChange={handleSearchInput}
           />
