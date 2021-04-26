@@ -11,8 +11,7 @@
 }
 .api {
   width: 90%;
-  background-color: #1a3a42;
-  border-style: dashed;
+  background-color: #282646;
   padding: 0.5em;
 }
 
@@ -46,25 +45,25 @@
   margin-bottom: 4em;
 }
 #awesome-button {
-    transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    left: 50%;
-    position: absolute;
-    margin: 0; 
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  margin: 0; 
 }
 .random-button {
-    margin-top: 25px;
-    padding: 5px;
-    background-color:rgb(4, 48, 85);
-    color: whitesmoke;
-    font-size: 1.25em;
-    border-radius: 0.25em;
-    border-style: none;
-    width: max-content;
-    cursor: pointer;
+  margin-top: 25px;
+  padding: 5px;
+  background-color:rgb(4, 48, 85);
+  color: whitesmoke;
+  font-size: 1.25em;
+  border-radius: 0.25em;
+  border-style: none;
+  width: max-content;
+  cursor: pointer;
 } 
 .random-button:hover {
-    background-color: rgb(4, 4, 248);
+  background-color: rgb(4, 4, 248);
 }
 
 .random-quote-wrapper {
@@ -72,24 +71,20 @@
   border-style: dashed;
   margin-bottom: 2em;
   width: 90%;
+  padding: 0.5em;
 }
 
 .quotes-wrapper {
-  border-style: ridge;
+  background-color: #282646;
+  border-style: dashed;
   margin-bottom: 0.5em;
   padding: 0 0.5em;
   width: 90%;
 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color:  #2f2c4e;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
