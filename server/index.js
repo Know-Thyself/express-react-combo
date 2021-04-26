@@ -7,13 +7,13 @@ const quotes = require("./quotes.json");
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.get("/", (req, res) => {
-	res.send(
-		"Biruk's Quote Server!  Ask me for /quotes,  quotes/random or /quotes/search?term=[your-search-term]"
-	);
+  res.send(
+	  "Biruk's Quote Server!  Ask me for /quotes,  quotes/random or /quotes/search?term=[your-search-term]"
+  );
 });
 
 app.get('/api', (req, res) => {
-    res.json({message: "Server connected"})
+  res.json({message: "Server connected"})
 });
 
 app.get("/quotes", (req, res) => {
@@ -30,11 +30,11 @@ app.get("/quotes/search", (req, res) => {
 		quote.quote.toLowerCase().includes(searchTerm) || 
     quote.author.toLowerCase().includes(searchTerm)
 	);
-	const letters = /^[A-Za-z]+$/;
-	if (!searchTerm.match(letters) || searchTerm.indexOf(' ') !== -1) {
+	const letters = /^[A-Za-z\s]+$/;
+	if (!searchTerm.match(letters) ) {
 		res.status(400).json({
 			message:
-				"Please make sure your search term is a single keyword and contains no characters rather than letters.",
+				"Please make sure your search term contains no characters rather than letters.",
 		});
 	} else if (searchResult.length < 1) {
 		res.status(400).json({
@@ -49,10 +49,10 @@ function pickFromArray(arr) {
 }
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-  });
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
 
 app.listen(PORT, () => {
-    console.log(`Sever listening on port ${PORT}`)
+  console.log(`Sever listening on port ${PORT}`)
 });
 
