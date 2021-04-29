@@ -22,7 +22,7 @@ const Quotes = () => {
       return quote.quote.toLowerCase().includes(searchInput) || quote.author.toLowerCase().includes(searchInput);
     });
     setQuotes(searchResult);
-    if (e.target.value === "") window.location.reload();
+    if (e.target.value === "") setController(false);
   }
 
   function pickFromArray(arr) {
