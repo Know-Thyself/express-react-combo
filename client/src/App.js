@@ -3,14 +3,11 @@ import Quotes from "./Quotes";
 import "./App.css";
 
 function App() {
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Quotes />
-      </header>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<Quotes />
+		</div>
+	);
 }
 
 export default App;

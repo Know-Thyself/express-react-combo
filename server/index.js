@@ -29,7 +29,7 @@ app.get("/quotes/search", (req, res) => {
 	} else if (searchResult.length < 1) {
 		res.status(400).json({
 			message:
-				"Your search term isn't found in quotes or authors' names. Please try another keyword.",
+				"Your search term isn't found in quotes or authors' names. Please try other keywords.",
 		});
 	} else res.send(searchResult);
 });
@@ -45,4 +45,3 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Sever listening on port ${PORT}`)
 });
-
