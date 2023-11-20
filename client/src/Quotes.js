@@ -80,7 +80,7 @@ const Quotes = () => {
 								" {quote.quote} "
 							</h3>
 							<h4 key={quote.author} className='author'>
-								{quote.author}
+								-- {quote.author}
 							</h4>
 						</div>
 					);

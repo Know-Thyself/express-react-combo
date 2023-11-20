@@ -1,104 +1,116 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css);
-@import url('https://fonts.googleapis.com/css2?family=Rye&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lato:wght@300;400;700&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600&family=Righteous&display=swap');
 
 .App {
-  text-align: center;
-  position: relative;
-  min-height: 100vh;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
 }
 
 .search-input-wrapper {
-  background-color: aliceblue;
-  display: flex;
-  width: 50%;
-  align-items: center;
-  justify-content: space-around;
-  margin: auto;
-  color: aliceblue;
-  padding: 0.3em;
-  border-radius: 0.2em;
- }
- 
- .search-bar {
-   background-color: aliceblue;
-   font-size: 0.9em;
-   border-radius: 0.25em;
-   padding-left: 0.5em;
-   width: 100%;
-   border: none;
-   outline: none;
- }
- 
- .fa-search {
-   color: rgb(133, 136, 138);
- }
+    background-color: aliceblue;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    color: aliceblue;
+    padding: 0.3em;
+    border-radius: 0.2em;
+}
+
+.search-bar {
+    background-color: aliceblue;
+    font-size: 0.9em;
+    border-radius: 0.25em;
+    padding-left: 0.5em;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.fa-search {
+    color: rgb(133, 136, 138);
+}
 
 .button-container {
-  margin-bottom: 4em;
+    margin-bottom: 4em;
 }
+
 .awesome-button {
-  transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  left: 50%;
-  position: absolute;
-  margin: 0; 
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    margin: 0;
 }
+
 .random-button {
-  margin-top: 25px;
-  padding: 5px 12px;
-  background-color: rgb(4, 4, 248);
-  color: whitesmoke;
-  font-size: 1.25em;
-  border-radius: 0.25em;
-  border-style: none;
-  width: max-content;
-  cursor: pointer;
-} 
+    margin-top: 25px;
+    padding: 5px 12px;
+    background-color: #C3073F;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-size: 1.25em;
+    border-radius: 0.25em;
+    border-style: none;
+    width: max-content;
+    cursor: pointer;
+}
+
 .random-button:hover {
-  background-color:rgb(12, 12, 233);
+    background-color: rgb(12, 12, 233);
 }
 
 .random-quote-wrapper {
-  background-color: #282646;
-  border: solid 1px #fff;
-  border-radius: 7px;
-  margin-bottom: 2em;
-  width: 90%;
-  padding: 0.5em;
+    background-color: #282646;
+    border: solid 1px #fff;
+    border-radius: 7px;
+    margin-bottom: 2em;
+    width: 90%;
+    padding: 0.5em;
+}
+
+.random-quote-wrapper h4,
+.quotes-wrapper h4 {
+    font-family: 'Courgette', cursive;
 }
 
 .quotes-wrapper {
-  background-color: #282646;
-  margin-bottom: 0.5em;
-  padding: 0 0.5em;
-  width: 90%;
+    background-color: #282646;
+    margin-bottom: 0.5em;
+    padding: 0 0.5em;
+    width: 90%;
 }
 
 .App-header {
-  background-color:  #454452;
-  /* min-height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  font-family: 'Rye', cursive;
-  color: white;
-  padding-bottom: 7rem;
+    background-color: #454452;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Courgette', cursive;
+    color: white;
+    padding-bottom: 7rem;
+}
+
+.App-header h1 {
+    font-family: 'Righteous', sans-serif;
 }
 
 .footer {
-  position: absolute;
-  margin-top: 2rem;
-  bottom: 0;
-  width: 100%;
-  background-color: #282646;
+    position: absolute;
+    margin-top: 2rem;
+    bottom: 0;
+    width: 100%;
+    background-color: #282646;
 }
 
 .api {
-  width: 90%;
-  margin: auto;
-  text-align: left;
-  padding: 1rem;
-  color: #fff;
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding: 1rem;
+    color: #fff;
 }
